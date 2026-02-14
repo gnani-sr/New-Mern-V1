@@ -1,11 +1,5 @@
 # Library MERN Application
 
-<p>
-  <a href="https://twitter.com/AlphaOmondi" target="_blank">
-    <img alt="Twitter: AlphaOmondi" src="https://img.shields.io/twitter/follow/AlphaOmondi.svg?style=social" />
-  </a>
-</p>
-
 A modern, full-stack Library Book Management application built with the **MERN stack** (MongoDB, Express, React, Node.js) and containerized with Docker and NGINX. This project demonstrates best practices for building production-ready web applications.
 
 ## 🚀 Features

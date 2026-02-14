@@ -26,7 +26,7 @@ services:
          - library-mern-api
 
    mongodb:
-      image: mongo
+      image: mongo:7.0
       restart: always
       ports:
          - 27017:27017
@@ -42,7 +42,7 @@ services:
       # mongo-express should only be used privately for development purposes.
       # It helps us interact with a mongoDB database using our browser
    mongo-express:
-      image: mongo-express
+      image: mongo-express:1.0.0
       depends_on:
          - mongodb
       ports:

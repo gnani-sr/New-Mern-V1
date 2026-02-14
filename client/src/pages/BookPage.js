@@ -1,20 +1,21 @@
 import React, { useEffect } from "react";
 import { Button, Card, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { listBookDetails } from "../actions/bookActions";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 
-const BookPage = ({ match }) => {
+const BookPage = () => {
    const dispatch = useDispatch();
+   const { id } = useParams();
 
    const bookDetails = useSelector((state) => state.bookDetails);
    const { loading, error, book } = bookDetails;
 
    useEffect(() => {
-      dispatch(listBookDetails(match.params.id));
-   }, [dispatch, match]);
+      dispatch(listBookDetails(id));
+   }, [dispatch, id]);
    return (
       <>
          <Link className="btn btn-success my-3" to="/books">
